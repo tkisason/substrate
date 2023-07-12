@@ -62,6 +62,7 @@ impl LoadedModule {
 		// checked for not having those ones when creating `wasmi::Module` below.
 		let mut config = WasmiConfig::default();
 		config
+			.wasm_sign_extension(true)
 			.wasm_multi_value(false)
 			.wasm_mutable_global(false)
 			.wasm_sign_extension(false)
